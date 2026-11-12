@@ -10,6 +10,7 @@ transaction
 
 DAX Measures – Financial Analysis Dashboard
 The following DAX measures were created to calculate key financial KPIs and support interactive business analysis.
+
 1. Total Amount
 Calculates the total transaction amount.
 
@@ -17,21 +18,33 @@ Total Amount = SUM(finance_transactions[amount])
 
 2. Total Transactions
 Calculates the total number of unique transactions.
+
 Total Transaction = DISTINCTCOUNT(finance_transactions[transaction_id])
-3. Average Transaction Value
+
+4. Average Transaction Value
+5. 
 Avg Transaction value = AVERAGE(finance_transactions[amount])
-4. Total Fee
+
+6. Total Fee
 Calculates the total transaction fees.
+
 Total fee = SUM(finance_transactions[fee_amount])
-5. Total Tax
+
+6. Total Tax
 Calculates the total tax collected from transactions.
+
 Total tax = SUM(finance_transactions[tax_amount])
  
 6.Dynamic Measure Selection
-Dynamic Measure = {
+
+Dynamic Measure = { 
+
     ("Total Amount", NAMEOF('finance_transactions'[Total Amount]), 0),
+    
     ("Total Transaction", NAMEOF('finance_transactions'[Total Transaction]), 1),
+    
     ("Total tax", NAMEOF('finance_transactions'[Total tax]), 2),
+    
     ("Total fee", NAMEOF('finance_transactions'[Total fee]), 3)
 }
 

@@ -159,31 +159,3 @@ YOY Tax =
 [Total tax] - [Previous-year-tax]
 ```
 
----
-
-### DAX Analysis Summary
-
-| Measure Category | Business Purpose |
-|---|---|
-| Total Amount | Measures overall transaction value |
-| Total Transactions | Tracks transaction volume |
-| Average Transaction Value | Measures average transaction size |
-| Total Fee | Analyzes fee revenue |
-| Total Tax | Tracks tax collection |
-| Dynamic Measure | Enables interactive KPI selection |
-| YoY Analysis | Compares current and previous-year performance |
-
-**Key DAX Functions Used:**
-
-- `SUM()` – Calculates total financial values.
-- `DISTINCTCOUNT()` – Counts unique transactions.
-- `AVERAGE()` – Calculates average transaction value.
-- `CALCULATE()` – Modifies filter context for calculations.
-- `SAMEPERIODLASTYEAR()` – Retrieves values for the corresponding previous-year period.
-- `NAMEOF()` – References measures in Field Parameters.
-
-
-YOY Fee = [Total fee]- [Previous-year-Fee]
-
-11.Year on Year of tax
-YOY Tax = [Total tax]- [Previous-year-tax]
